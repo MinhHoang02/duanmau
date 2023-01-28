@@ -1,10 +1,10 @@
 <?php
-include './layout/header.php';
+include './site/header.php';
 ?>
 <?php
-include './layout/products_home.php';
+include './site/products_home.php';
 ?>
 
 <?php
-include './layout/footer.php';
+include './site/footer.php';
 ?>
