@@ -1,6 +1,3 @@
-<?php
-    require "./global.php";
-?>
 
 
 <!DOCTYPE html>
@@ -13,18 +10,18 @@
     <title>Document</title>
     <link rel="shortcut icon" href="images/favicon.png" type="<?php $BOOTSTRAP_URL ?>/images/x-icon">
     <!-- bootstrap core css -->
-    <link rel="stylesheet" type="text/css" href="<?php $BOOTSTRAP_URL ?>/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?= $BOOTSTRAP_URL ?>/css/bootstrap.css" />
     <!--owl slider stylesheet -->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- font awesome style -->
-    <link href="<?php $BOOTSTRAP_URL ?>/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="<?= $BOOTSTRAP_URL ?>/css/font-awesome.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template -->
-    <link href="<?php $BOOTSTRAP_URL ?>/css/style.css" rel="stylesheet" />
+    <link href="<?= $BOOTSTRAP_URL ?>/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
-    <link href="<?php $BOOTSTRAP_URL ?>/css/responsive.css" rel="stylesheet" />
+    <link href="<?= $BOOTSTRAP_URL ?>/css/responsive.css" rel="stylesheet" />
 </head>
 
 <body>

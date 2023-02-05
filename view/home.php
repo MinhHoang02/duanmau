@@ -8,7 +8,8 @@
     <title>Document</title>
     <link rel="shortcut icon" href="images/favicon.png" type="./bootstrap/images/x-icon">
     <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link href="./bootstrap/css/font-awesome.min.css" rel="stylesheet" />
     <link href="./bootstrap/css/style.css" rel="stylesheet" />
     <link href="./bootstrap/css/responsive.css" rel="stylesheet" />
@@ -19,185 +20,45 @@
         <div class="container">
             <div class="heading_container heading_center">
                 <h2>
-                    Latest Watches
+                    Top sản phẩm yêu thích
                 </h2>
             </div>
             <div class="row">
-                <div class="col-md-6 ">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w1.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
+                <?php
+                include "pdo/pdo.php";
+                $sql = "SELECT * from sanpham ORDER BY view DESC LIMIT 6";
+                $kq = $conn->query($sql);
+                foreach ($kq as $key => $row) {
+                    ?>
+                    <div class="col-sm-6 col-xl-3">
+                        <div class="box">
+                            <a href="">
+                                <div class="img-box">
+                                    <a><img src="./bootstrap/images/<?php echo $row['anhdd']; ?>"></a>
+                                </div>
+                                <div class="detail-box">
+                                    <h6>
+                                        <a href="./site/spct.php?id_sp=<?php echo $row['id_sp'] ?>&id_dm=<?php echo $row['id_dm'] ?>"><?php
+                                                  echo $row['tensp'] ?></a>
+                                    </h6>
+                                    <h6>
+                                        Price:
+                                        <span>
+                                            $<?php echo number_format($row["gia"]); ?>
+                                        </span>
+                                    </h6>
+                                </div>
+                                <div class="new">
                                     <span>
-                                        $300
+                                        New
                                     </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    Featured
-                                </span>
-                            </div>
-                        </a>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w2.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $125
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w3.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $110
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w4.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $145
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w5.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $195
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6  col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w6.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $170
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                    <div class="box">
-                        <a href="">
-                            <div class="img-box">
-                                <img src="./bootstrap/images/w1.png" alt="">
-                            </div>
-                            <div class="detail-box">
-                                <h6>
-                                    Smartwatch
-                                </h6>
-                                <h6>
-                                    Price:
-                                    <span>
-                                        $230
-                                    </span>
-                                </h6>
-                            </div>
-                            <div class="new">
-                                <span>
-                                    New
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                    <?php
+                }
+                ?>
             </div>
             <div class="btn-box">
                 <a href="">
